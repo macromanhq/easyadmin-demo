@@ -56,7 +56,14 @@ class DashboardController extends AbstractDashboardController
     public function configureUserMenu(UserInterface $user): UserMenu
     {
         return parent::configureUserMenu($user)
-            ->setName($user->getFullName());
+            ->setName($user->getFullName())
+            ->setMenuItems([
+                MenuItem::linkToCrud('Blog Post ', 'fa fa-id-card', Post::class),
+                MenuItem::linkToCrud('Tags', 'fa fa-user-cog', Tag::class),
+                MenuItem::section(),
+                MenuItem::linkToLogout('Logout', 'fa fa-sign-out'),
+            ])
+        ;
     }
 
     public function configureMenuItems(): iterable
