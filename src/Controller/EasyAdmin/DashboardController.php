@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Controller\EasyAdmin;
 
 use App\Entity\Comment;
@@ -25,6 +34,8 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
+        return parent::index();
+
         $adminUrlGenerator = $this->get(AdminUrlGenerator::class);
 
         return $this->redirect($adminUrlGenerator->setController(PostCrudController::class)->generateUrl());
