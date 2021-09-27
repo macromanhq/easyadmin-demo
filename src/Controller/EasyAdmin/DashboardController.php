@@ -34,11 +34,11 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        return $this->render('dashboard/home.html.twig');
 
-        $adminUrlGenerator = $this->get(AdminUrlGenerator::class);
+        // $adminUrlGenerator = $this->get(AdminUrlGenerator::class);
 
-        return $this->redirect($adminUrlGenerator->setController(PostCrudController::class)->generateUrl());
+        // return $this->redirect($adminUrlGenerator->setController(PostCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -50,6 +50,7 @@ class DashboardController extends AbstractDashboardController
     public function configureCrud(): Crud
     {
         return Crud::new()
+            ->setSearchFields(null)
             ->setDateTimeFormat('medium', 'short');
     }
 
@@ -68,12 +69,23 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linktoDashboard('Dashboard', 'fa fa-dashboard');
         yield MenuItem::linkToCrud('Users', 'fa fa-users', User::class);
-        yield MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text-o', Post::class);
-        yield MenuItem::linkToCrud('Comments', 'far fa-comments', Comment::class);
-        yield MenuItem::linkToCrud('Tags', 'fas fa-tags', Tag::class);
-
+        yield MenuItem::subMenu('Blogging', 'fa fa-file')->setSubItems([
+            MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text-o', Post::class),
+            MenuItem::linkToCrud('Comments', 'far fa-comments', Comment::class),
+            MenuItem::linkToCrud('Tags', 'fas fa-tags', Tag::class),
+        ]);
+        yield MenuItem::subMenu('Blogging', 'fa fa-file')->setSubItems([
+            MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text-o', Post::class),
+            MenuItem::linkToCrud('Comments', 'far fa-comments', Comment::class),
+            MenuItem::linkToCrud('Tags', 'fas fa-tags', Tag::class),
+        ]);
+        yield MenuItem::subMenu('Blogging', 'fa fa-file')->setSubItems([
+            MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text-o', Post::class),
+            MenuItem::linkToCrud('Comments', 'far fa-comments', Comment::class),
+            MenuItem::linkToCrud('Tags', 'fas fa-tags', Tag::class),
+        ]);
         yield MenuItem::section('Resources');
         yield MenuItem::linkToUrl('EasyAdmin Docs', 'fas fa-book', 'https://symfony.com/doc/current/bundles/EasyAdminBundle/index.html')->setLinkTarget('_blank');
         yield MenuItem::linkToCrud('Form Field Reference', 'far fa-file-code', FormFieldReference::class)->setAction(Action::NEW);
