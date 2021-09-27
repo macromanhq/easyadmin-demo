@@ -17,6 +17,7 @@ use App\Entity\Post;
 use App\Entity\Tag;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -39,6 +40,17 @@ class DashboardController extends AbstractDashboardController
         // $adminUrlGenerator = $this->get(AdminUrlGenerator::class);
 
         // return $this->redirect($adminUrlGenerator->setController(PostCrudController::class)->generateUrl());
+    }
+
+    public function configureAssets(): Assets
+    {
+        return Assets::new()
+            // ->addWebpackEncoreEntry('admin-app')
+            ->addCssFile('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap')
+            ->addCssFile('/dashboard/css/nav.css')
+            ->addCssFile('/dashboard/css/sidebar.css')
+            ->addCssFile('/dashboard/css/home.css')
+        ;
     }
 
     public function configureDashboard(): Dashboard
