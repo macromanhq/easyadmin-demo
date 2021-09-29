@@ -23,16 +23,26 @@
     padding: 14px 16px;
     color: rgba(255, 255, 255, 0.55);
 }
+#main-menu .menu a:hover {
+    background: #484848;
+}
+
+
+#main-menu .menu .menu-item .submenu-toggle .submenu-toggle-icon,
+#main-menu .menu a .menu-icon {
+    color: rgba(255, 255, 255, 0.55);
+}
 #main-menu .menu .menu-item {
     padding-right: 0;
 }
-
+#main-menu .menu .menu-item.expanded .submenu-toggle .submenu-toggle-icon,
 #main-menu .menu .menu-item.expanded > a.submenu-toggle .menu-icon {
     color: #FFFFFF;
 }
 #main-menu .menu .menu-item.expanded > a.submenu-toggle {
     color: #FFFFFF;
     background: #000;
+    border-right: 3px solid #716EFF;
 }
 
 
@@ -51,6 +61,10 @@
 #main-menu .menu .menu-item.active:not(.expanded) a {
     color: #FFFFFF;
     background: rgba(0, 0, 0, 0.3);
+    border-right: 3px solid #716EFF;
+}
+#main-menu .menu .menu-item .submenu a:hover .menu-icon {
+    color: #FFFFFF;
 }
 
 #main-menu .menu .menu-item.active a span {
