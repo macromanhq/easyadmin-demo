@@ -23,3 +23,10 @@ npm-debug.log
 yarn-error.log
 .node-version
 ###< symfony/webpack-encore-bundle ###
+
+###> Node Module ###
+node_modules
+###< Node Module ###
+###> PHPStorm ###
+.idea/
+###< PHPstorm ###

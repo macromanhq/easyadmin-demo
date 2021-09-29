@@ -8,313 +8,313 @@
 {% block body_class %}dashboard-home {{parent()}}{% endblock %}
 
 {% block main %}
-      <div class="">
-        <!-- Top Section -->
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-5">
-          <div class="col mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="text-muted mt-3 text-uppercase title">New Order</div>
-                <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="text-muted mt-3 text-uppercase title">New Order</div>
-                <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="text-muted mt-3 text-uppercase title">New Order</div>
-                <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="text-muted mt-3 text-uppercase title">New Order</div>
-                <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="text-muted mt-3 text-uppercase title">New Order</div>
-                <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
-              </div>
-            </div>
+  <div class="">
+    <!-- Top Section -->
+    <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-5 mt-4 dash-top">
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted mt-3 text-uppercase title">New Order</div>
+            <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
           </div>
         </div>
-
-        <!-- Middle Section -->
-        <div class="row">
-          <div class="col-md-8 mb-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="d-flex align-items-center">
-                  <h5 class="card-title text-uppercase fw-bold">Sale Report</h5>
-                  <div class="dropdown ms-auto">
-                    <a class="" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a class="dropdown-item active" href="#">Last 7 days</a>
-                      <a class="dropdown-item" href="#">Last 30 days</a>
-                      <a class="dropdown-item" href="#">Last 3 months</a>
-                    </div>
-                  </div>
-                </div>
-                <div id="chart">
-                  <img src="assets/images/chart_1.png" class="img-fluid w-100" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="d-flex align-items-center">
-                  <h5 class="card-title text-uppercase fw-bold">Sales By Category</h5>
-                </div>
-                <div id="chart2">
-                  <img src="assets/images/chart_2.png" class="img-fluid w-100" alt="">
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted mt-3 text-uppercase title">New Order</div>
+            <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
           </div>
         </div>
-
-        <!-- Bottom Section -->
-        <div class="row">
-          <div class="col-md-8 mb-4">
-            <div class="card h-100">
-              <div class="card-header">
-                <h5 class="card-title text-uppercase fw-bold">Recent Orders</h5>
-              </div>
-              <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable">
-                  <thead>
-                  <tr>
-                    <th class="">Product ID</th>
-                    <th>Customer</th>
-                    <th>Order Date</th>
-                    <th>Status</th>
-                    <th>Price</th>
-                    <th></th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <span class="text-muted">#001401</span>
-                    </td>
-                    <td>
-                      <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
-                    </td>
-                    <td>
-                      20/03/2021
-                    </td>
-                    <td>
-                      <span class="badge bg-success me-1"></span> Paid
-                    </td>
-                    <td>
-                      $32,000
-                    </td>
-                    <td class="text-end actions">
-                      <a href="#" class="me-2 text-decoration-none text-reset">
-                        <i class="far fa-edit"></i>
-                      </a>
-                      <a href="#" class="text-decoration-none text-reset">
-                        <i class="far fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="text-muted">#001401</span>
-                    </td>
-                    <td>
-                      <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
-                    </td>
-                    <td>
-                      20/03/2021
-                    </td>
-                    <td>
-                      <span class="badge bg-success me-1"></span> Paid
-                    </td>
-                    <td>
-                      $32,000
-                    </td>
-                    <td class="text-end actions">
-                      <a href="#" class="me-2 text-decoration-none text-reset">
-                        <i class="far fa-edit"></i>
-                      </a>
-                      <a href="#" class="text-decoration-none text-reset">
-                        <i class="far fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="text-muted">#001401</span>
-                    </td>
-                    <td>
-                      <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
-                    </td>
-                    <td>
-                      20/03/2021
-                    </td>
-                    <td>
-                      <span class="badge bg-success me-1"></span> Paid
-                    </td>
-                    <td>
-                      $32,000
-                    </td>
-                    <td class="text-end actions">
-                      <a href="#" class="me-2 text-decoration-none text-reset">
-                        <i class="far fa-edit"></i>
-                      </a>
-                      <a href="#" class="text-decoration-none text-reset">
-                        <i class="far fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="text-muted">#001401</span>
-                    </td>
-                    <td>
-                      <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
-                    </td>
-                    <td>
-                      20/03/2021
-                    </td>
-                    <td>
-                      <span class="badge bg-success me-1"></span> Paid
-                    </td>
-                    <td>
-                      $32,000
-                    </td>
-                    <td class="text-end actions">
-                      <a href="#" class="me-2 text-decoration-none text-reset">
-                        <i class="far fa-edit"></i>
-                      </a>
-                      <a href="#" class="text-decoration-none text-reset">
-                        <i class="far fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="text-muted">#001401</span>
-                    </td>
-                    <td>
-                      <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
-                    </td>
-                    <td>
-                      20/03/2021
-                    </td>
-                    <td>
-                      <span class="badge bg-success me-1"></span> Paid
-                    </td>
-                    <td>
-                      $32,000
-                    </td>
-                    <td class="text-end actions">
-                      <a href="#" class="me-2 text-decoration-none text-reset">
-                        <i class="far fa-edit"></i>
-                      </a>
-                      <a href="#" class="text-decoration-none text-reset">
-                        <i class="far fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted mt-3 text-uppercase title">New Order</div>
+            <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <div class="card-header d-flex align-items-center">
-                <h5 class="card-title text-uppercase fw-bold">Recent Orders</h5>
-                <div class="dropdown ms-auto">
-                  <a class="" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</a>
-                  <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item active" href="#">Last 7 days</a>
-                    <a class="dropdown-item" href="#">Last 30 days</a>
-                    <a class="dropdown-item" href="#">Last 3 months</a>
-                  </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted mt-3 text-uppercase title">New Order</div>
+            <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted mt-3 text-uppercase title">New Order</div>
+            <div class="h1 m-0 mb-3 fw-bold amount">3120</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <h5 class="card-title text-uppercase fw-bold mb-0">Sale Report</h5>
+              <div class="dropdown ms-auto">
+                <a class="" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item active" href="#">Last 7 days</a>
+                  <a class="dropdown-item" href="#">Last 30 days</a>
+                  <a class="dropdown-item" href="#">Last 3 months</a>
                 </div>
               </div>
-              <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable">
-                  <tbody>
-                  <tr>
-                    <td class="prod-title fw-bold">Iphone 12</td>
-                    <td class="text-end tag">
-                      <small>Sold</small>
-                      <span class="d-block number fw-bold">10</span>
-                    </td>
-                    <td class="text-end tag">
-                      <small>left</small>
-                      <span class="d-block number fw-bold">04</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="prod-title fw-bold">Iphone 12</td>
-                    <td class="text-end tag">
-                      <small>Sold</small>
-                      <span class="d-block number fw-bold">10</span>
-                    </td>
-                    <td class="text-end tag">
-                      <small>left</small>
-                      <span class="d-block number fw-bold">04</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="prod-title fw-bold">Iphone 12</td>
-                    <td class="text-end tag">
-                      <small>Sold</small>
-                      <span class="d-block number fw-bold">10</span>
-                    </td>
-                    <td class="text-end tag">
-                      <small>left</small>
-                      <span class="d-block number fw-bold">04</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="prod-title fw-bold">Iphone 12</td>
-                    <td class="text-end tag">
-                      <small>Sold</small>
-                      <span class="d-block number fw-bold">10</span>
-                    </td>
-                    <td class="text-end tag">
-                      <small>left</small>
-                      <span class="d-block number fw-bold">04</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="prod-title fw-bold">Iphone 12</td>
-                    <td class="text-end tag">
-                      <small>Sold</small>
-                      <span class="d-block number fw-bold">10</span>
-                    </td>
-                    <td class="text-end tag">
-                      <small>left</small>
-                      <span class="d-block number fw-bold">04</span>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+            </div>
+            <div id="chart">
+              <img src="assets/images/chart_1.png" class="img-fluid w-100" alt="">
             </div>
           </div>
         </div>
       </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <h5 class="card-title text-uppercase fw-bold mb-0">Sales By Category</h5>
+            </div>
+            <div id="chart2">
+              <img src="assets/images/chart_2.png" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card h-100">
+          <div class="card-header py-3">
+            <h5 class="card-title text-uppercase fw-bold mb-0">Recent Orders</h5>
+          </div>
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap datatable">
+              <thead>
+              <tr>
+                <th class="">Product ID</th>
+                <th>Customer</th>
+                <th>Order Date</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <span class="text-muted">#001401</span>
+                </td>
+                <td>
+                  <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
+                </td>
+                <td>
+                  20/03/2021
+                </td>
+                <td>
+                  <span class="badge bg-success me-1"></span> Paid
+                </td>
+                <td>
+                  $32,000
+                </td>
+                <td class="text-end actions">
+                  <a href="#" class="me-2 text-decoration-none text-reset">
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-reset">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="text-muted">#001401</span>
+                </td>
+                <td>
+                  <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
+                </td>
+                <td>
+                  20/03/2021
+                </td>
+                <td>
+                  <span class="badge bg-success me-1"></span> Paid
+                </td>
+                <td>
+                  $32,000
+                </td>
+                <td class="text-end actions">
+                  <a href="#" class="me-2 text-decoration-none text-reset">
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-reset">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="text-muted">#001401</span>
+                </td>
+                <td>
+                  <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
+                </td>
+                <td>
+                  20/03/2021
+                </td>
+                <td>
+                  <span class="badge bg-success me-1"></span> Paid
+                </td>
+                <td>
+                  $32,000
+                </td>
+                <td class="text-end actions">
+                  <a href="#" class="me-2 text-decoration-none text-reset">
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-reset">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="text-muted">#001401</span>
+                </td>
+                <td>
+                  <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
+                </td>
+                <td>
+                  20/03/2021
+                </td>
+                <td>
+                  <span class="badge bg-success me-1"></span> Paid
+                </td>
+                <td>
+                  $32,000
+                </td>
+                <td class="text-end actions">
+                  <a href="#" class="me-2 text-decoration-none text-reset">
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-reset">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="text-muted">#001401</span>
+                </td>
+                <td>
+                  <a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a>
+                </td>
+                <td>
+                  20/03/2021
+                </td>
+                <td>
+                  <span class="badge bg-success me-1"></span> Paid
+                </td>
+                <td>
+                  $32,000
+                </td>
+                <td class="text-end actions">
+                  <a href="#" class="me-2 text-decoration-none text-reset">
+                    <i class="far fa-edit"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-reset">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header d-flex align-items-center py-3">
+            <h5 class="card-title text-uppercase fw-bold mb-0">Recent Orders</h5>
+            <div class="dropdown ms-auto">
+              <a class="" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item active" href="#">Last 7 days</a>
+                <a class="dropdown-item" href="#">Last 30 days</a>
+                <a class="dropdown-item" href="#">Last 3 months</a>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap datatable">
+              <tbody>
+              <tr>
+                <td class="prod-title fw-bold">Iphone 12</td>
+                <td class="text-end tag">
+                  <small>Sold</small>
+                  <span class="d-block number fw-bold">10</span>
+                </td>
+                <td class="text-end tag">
+                  <small>left</small>
+                  <span class="d-block number fw-bold">04</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="prod-title fw-bold">Iphone 12</td>
+                <td class="text-end tag">
+                  <small>Sold</small>
+                  <span class="d-block number fw-bold">10</span>
+                </td>
+                <td class="text-end tag">
+                  <small>left</small>
+                  <span class="d-block number fw-bold">04</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="prod-title fw-bold">Iphone 12</td>
+                <td class="text-end tag">
+                  <small>Sold</small>
+                  <span class="d-block number fw-bold">10</span>
+                </td>
+                <td class="text-end tag">
+                  <small>left</small>
+                  <span class="d-block number fw-bold">04</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="prod-title fw-bold">Iphone 12</td>
+                <td class="text-end tag">
+                  <small>Sold</small>
+                  <span class="d-block number fw-bold">10</span>
+                </td>
+                <td class="text-end tag">
+                  <small>left</small>
+                  <span class="d-block number fw-bold">04</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="prod-title fw-bold border-0">Iphone 12</td>
+                <td class="text-end tag border-0">
+                  <small>Sold</small>
+                  <span class="d-block number fw-bold">10</span>
+                </td>
+                <td class="text-end tag border-0">
+                  <small>left</small>
+                  <span class="d-block number fw-bold">04</span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

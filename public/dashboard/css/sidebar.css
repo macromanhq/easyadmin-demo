@@ -1,0 +1,58 @@
+.sidebar {
+    background: #2D2D2D;
+    font-weight: 700;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+}
+
+/* Logo */
+.main-header #header-logo a {
+    padding-left: 16px;
+    color: #FFFFFF;
+}
+
+/* Menu Header */
+#main-menu .menu .menu-header {
+    padding-left: 16px;
+}
+
+
+/* Main Menu-Item */
+#main-menu .menu a {
+    padding: 14px 16px;
+    color: rgba(255, 255, 255, 0.55);
+}
+#main-menu .menu .menu-item {
+    padding-right: 0;
+}
+
+#main-menu .menu .menu-item.expanded > a.submenu-toggle .menu-icon {
+    color: #FFFFFF;
+}
+#main-menu .menu .menu-item.expanded > a.submenu-toggle {
+    color: #FFFFFF;
+    background: #000;
+}
+
+
+/*Submenu*/
+#main-menu .menu .submenu a {
+    padding: 14px 8px 14px 30px;
+}
+#main-menu .menu .menu-item.active:not(.expanded) .menu-icon {
+    color: #FFFFFF;
+}
+#main-menu .menu .menu-item.expanded a {
+    color: rgba(255, 255, 255, 0.55);
+    background: rgba(0, 0, 0, 0.2);
+}
+#main-menu .menu .menu-item .submenu a:hover,
+#main-menu .menu .menu-item.active:not(.expanded) a {
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#main-menu .menu .menu-item.active a span {
+    text-decoration: none;
+}
