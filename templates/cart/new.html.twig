@@ -1,0 +1,366 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'New Cart'|trans %}
+
+{% block page_content %}
+<form name="cart_form" method="post">
+    <div class="row row-deck row-cards" data-controller="cart">
+        <div class="col-12">
+            <div class="card cart-top-prod-table">
+                <div class="" data-cart-target="sellParent" data-count-sell="1">
+                    <table class="table card-table datatable text-nowrap table-borderless">
+                        <thead>
+                            <tr>
+                                <th class="bg-transparent">Product<span class="required">*</span>
+                                </th>
+                                <th class="bg-transparent">Stock<span class="required">*</span>
+                                </th>
+                                <th class="bg-transparent">Unit Price<span class="required">*</span>
+                                </th>
+                                <th class="bg-transparent">Quantity<span class="required">*</span>
+                                </th>
+                                <th class="bg-transparent">Total Price<span class="required">*</span>
+                                </th>
+                                <th class="bg-transparent"></th>
+                            </tr>
+                        </thead>
+                        <tbody data-cart-target="sellCollection">
+                            <tr data-controller="sell" data-sell-url-value="/cart/product/QUERY" id="cart_form_sell_0" name="cart_form[sell][0]" required="required">
+                                <td class="td-product w-28p">
+                                    <div class="input-group p-0">
+                                        <div class="cart-item border rounded d-none" data-sell-target="productSelected" data-action="click->sell#onRepeatSearch"></div>
+                                        <div class="dropdown-menu dropdown-cart-item show" data-sell-target="productSearchDropdown">
+                                            <div class="dropdown-header px-0 border" data-sell-target="productSearchDropdownHeader">
+                                                <div class="input-icon col-12">
+                                                    <input type="text" class="form-control border-0" placeholder="Type to search for a product" data-sell-target="productSearchInput" data-action="sell#onSearch">
+                                                    <span class="input-icon-addon">
+                                                        <div class="spinner-border spinner-border-sm text-muted" role="status" data-sell-target="productSearchInputIconSpinner"></div>
+                                                        <a href="#" data-sell-target="productSearchInputIconX" data-action="sell#clearQuery">
+                                                            <i class="ti ti-x"></i>
+                                                        </a>
+                                                        <i class="ti ti-search d-block" data-sell-target="productSearchInputIconSearch"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-result" data-sell-target="productSearchResult"></div>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" id="cart_form_sell_0_product" name="cart_form[sell][0][product]" data-sell-target="productSelectedInput" class="form-control">
+                                </td>
+                                <td class="td-stock w-27p">
+
+                                    <div class="input-group p-0">
+                                        <div class="cart-item border rounded" data-sell-target="stockSelected" data-action="click->sell#onListStock">
+                                            <br>
+                                            <span class="cart-item-title">Select a product first to select stock</span>
+                                        </div>
+                                        <div class="dropdown-menu dropdown-cart-item" data-sell-target="stockListDropdown">
+                                            <div class="dropdown-header border">
+                                                Select stock
+                                            </div>
+                                            <div class="dropdown-result" data-sell-target="stockListResult"></div>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" id="cart_form_sell_0_stock" name="cart_form[sell][0][stock]" data-sell-target="stockSelectedInput" class="form-control">
+                                </td>
+                                <td class="td-unit-price w-10p">
+                                    <div class="">
+                                        <input type="number" id="cart_form_sell_0_unitPrice" name="cart_form[sell][0][unitPrice]" required="required" step="any" data-action="sell#calculateTotal" data-sell-target="unitPrice" class="form-control no-number-spin py-11 pe-16 form-control">
+                                    </div>
+                                </td>
+                                <td class="td-quantity w-10p">
+                                    <div class="">
+                                        <input type="number" id="cart_form_sell_0_quantity" name="cart_form[sell][0][quantity]" required="required" min="1" data-action="sell#calculateTotal" data-sell-target="unitQuantity" class="form-control no-number-spin py-11 pe-16 form-control">
+                                    </div>
+                                </td>
+                                <td class="td-total-price w-10p">
+                                    <div class="">
+                                        <input type="number" id="cart_form_sell_0_totalPrice" name="cart_form[sell][0][totalPrice]" required="required" readonly="readonly" step="any" data-sell-target="totalPrice" data-cart-target="sellRowTotalPrice" data-action="cart#calculateCartSubTotalPrice" class="form-control no-number-spin py-11 pe-16 form-control">
+                                    </div>
+                                </td>
+                                <td class="td-action-x w-5p">
+                                    <button type="button" class="btn btn-outline-danger" data-action="cart#removeSellRow">
+                                        <i class="ti ti-x"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-body pt-0">
+                    <button type="button" class="btn btn-primary text-uppercase" data-action="cart#addSellRow">
+                        <i class="ti ti-plus"></i>
+                        Add A Product
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="col-xl-6 col-lg-12 cart-bot-tables">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-uppercase font-weight-bold">Payment Method<span class="required">*</span>
+                    </h1>
+                    <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="41">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="ti ti-cash-banknote"></i>
+                                </span>
+                                Cash
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_paymentMethod_42" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="42">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="ti ti-cash-banknote"></i>
+                                </span>
+                                Cash On Delivery
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_paymentMethod_43" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="43">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="ti ti-cash-banknote"></i>
+                                </span>
+                                bKash
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_paymentMethod_44" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="44">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="ti ti-cash-banknote"></i>
+                                </span>
+                                Nagad
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_paymentMethod_45" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="45">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="ti ti-cash-banknote"></i>
+                                </span>
+                                Bank
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-12 cart-bot-tables">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-uppercase font-weight-bold">Shipment method<span class="required">*</span>
+                    </h1>
+                    <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_shippingMethod_39" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="39">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="pe-2">
+                                    <i class="ti ti-truck-off"></i>
+                                </span>
+                                Walk in Customer
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_shippingMethod_40" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="40">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="pe-2">
+                                    <i class="ti ti-truck-off"></i>
+                                </span>
+                                In Store Pickup
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_shippingMethod_41" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="41">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="pe-2">
+                                    <i class="ti ti-truck-off"></i>
+                                </span>
+                                SA Paribahan
+                            </div>
+                        </label>
+                        <label class="form-selectgroup-item flex-fill">
+                            <input type="radio" id="cart_form_shippingMethod_42" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="42">
+                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                                <span class="pe-2">
+                                    <i class="ti ti-truck-off"></i>
+                                </span>
+                                Sundarban Courier Service
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="col-lg-12 col-xl-6 cart-mid-tables">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex mb-3">
+                        <label class="form-label text-uppercase">Sub Total<span class="required">*</span>
+                        </label>
+                        <input type="number" id="cart_form_subTotal" name="cart_form[subTotal]" required="required" readonly="readonly" step="any" class="no-number-spin form-control" data-cart-target="cartSubTotalPrice">
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label text-uppercase">Discount<span class="required">*</span>
+                        </label>
+                        <input type="number" id="cart_form_discount" name="cart_form[discount]" required="required" step="any" class="no-number-spin form-control" data-action="cart#calculateTotal" data-cart-target="cartDiscount" value="0.00">
+                        <div class="input-icon ms-16">
+                            <input type="number" min="0" max="100" step="any" class="form-control no-number-spin" data-cart-target="cartDiscountPercent" data-action="cart#calculateDiscountPercent">
+                            <span class="input-icon-addon">
+                                <i class="ti ti-percentage"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label text-uppercase">Total<span class="required">*</span>
+                        </label>
+                        <input type="number" id="cart_form_total" name="cart_form[total]" required="required" readonly="readonly" step="any" class="no-number-spin form-control" data-cart-target="cartTotalPrice">
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label text-uppercase">Payment<span class="required">*</span>
+                        </label>
+                        <input type="number" id="cart_form_payment" name="cart_form[payment]" required="required" step="any" class="no-number-spin form-control" data-cart-target="cartPayment">
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label col-2 col-form-label text-uppercase">Customer<span class="required">*</span>
+                        </label>
+                        <select id="cart_form_customer" name="cart_form[customer]" data-cart-target="cartCustomerSelect" required="required" class="form-control">
+                            <option value=""></option>
+                            <option value="30004">Sarim Khan [+8801732261726]</option>
+                            <option value="30005">Oritro [+8801732261726]</option>
+                        </select>
+                        <button type="button" class="btn btn-primary text-uppercase btn-add-new" data-action="cart#toggleNewCustomerForm" data-cart-target="toggleNewCustomerButton">
+                            <i class="ti ti-plus"></i>
+                            Add New
+                        </button>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label col-2 col-form-label text-uppercase">Remarks</label>
+                        <input type="text" id="cart_form_remarks" name="cart_form[remarks]" maxlength="255" class="form-control">
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label class="form-label col-2 col-form-label text-uppercase">Date<span class="required">*</span>
+                        </label>
+                        <input type="datetime-local" id="cart_form_date" name="cart_form[date]" required="required" class="form-control" value="2021-09-29T21:59:21">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-xl-6 cart-mid-tables">
+            <div class="card customer-data">
+                <div class="card-body">
+                    <fieldset data-cart-target="cartNewCustomerFieldset">
+                        <h1 class="card-title text-uppercase font-weight-bold">New Customer</h1>
+                        <div class="d-flex mb-3">
+                            <label class="form-label text-uppercase">Name<span class="required">*</span>
+                            </label>
+                            <input type="text" id="cart_form_newCustomer_name" name="cart_form[newCustomer][name]" required="required" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <label class="form-label text-uppercase">Email<span class="required">*</span>
+                            </label>
+                            <input type="text" id="cart_form_newCustomer_email" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <label class="form-label text-uppercase">Mobile No<span class="required">*</span>
+                            </label>
+                            <input type="text" id="cart_form_newCustomer_mobileNo" name="cart_form[newCustomer][mobileNo]" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <label class="form-label text-uppercase">Address<span class="required">*</span>
+                            </label>
+                            <textarea id="cart_form_newCustomer_address" name="cart_form[newCustomer][address]" required="required" data-cart-target="cartNewCustomerFieldsetInput" class="form-control"></textarea>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <label class="form-label col-2 col-form-label text-uppercase">Description</label>
+                            <input type="text" id="cart_form_newCustomer_description" name="cart_form[newCustomer][description]" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Print Section -->
+        <div class="d-xl-flex mb-4">
+            <div class="flex-xl-grow-1 cart-print-section">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h1 class="text-primary text-uppercase">Print</h1>
+                        <div class="form-selectgroup">
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="HTML" class="form-selectgroup-input" checked="">
+                                <span class="form-selectgroup-label">Invoice</span>
+                            </label>
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="CSS" class="form-selectgroup-input">
+                                <span class="form-selectgroup-label">Option</span>
+                            </label>
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="PHP" class="form-selectgroup-input">
+                                <span class="form-selectgroup-label">Demo</span>
+                            </label>
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="JavaScript" class="form-selectgroup-input">
+                                <span class="form-selectgroup-label">Select</span>
+                            </label>
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="JavaScript" class="form-selectgroup-input">
+                                <span class="form-selectgroup-label">Choose</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-xl-2">
+                <div class="card">
+                    <div class="card-body py-9 px-8 d-flex justify-content-center align-items-center">
+                        <div class="form-selectgroup">
+                            <label class="form-selectgroup-item my-0">
+                                <input type="checkbox" id="cart_form_sendSms" name="cart_form[sendSms]" class="form-selectgroup-input form-control" value="1">
+                                <span class="form-selectgroup-label max-w-36 px-5px me-8" data-bs-toggle="tooltip" data-bs-placement="top" title="Send SMS Notification">
+                                    <i class="ti ti-device-mobile-message"></i>
+                                </span>
+                            </label>
+                            <label class="form-selectgroup-item my-0">
+                                <input type="checkbox" id="cart_form_sendEmail" name="cart_form[sendEmail]" class="form-selectgroup-input form-control" value="1">
+                                <span class="form-selectgroup-label max-w-36 px-5px" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email Notification">
+                                    <i class="ti ti-mail"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" cart-print-section">
+                <button type="submit" class="btn btn-primary px-5 h-100 text-uppercase">
+                    Finish Sale
+                </button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="cart_form__token" name="cart_form[_token]" class="form-control" value="gyjeu3uSZ7FgkJ14iptvGdeyEtDEuenY_VCQ441iMoM">
+</form>
+
+{% endblock %}
