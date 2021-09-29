@@ -1,13 +1,13 @@
-.search-form {
+.content-top .search-form {
     position: relative;
 }
-.search-form .btn {
+.content-top .search-form .btn {
     border-radius: 0;
     border-right: none;
     box-shadow: none;
     background: transparent;
     position: absolute;
 }
-.search-form .form-control {
+.content-top .search-form .form-control {
     padding: 9px 17px 9px 40px;
 }
