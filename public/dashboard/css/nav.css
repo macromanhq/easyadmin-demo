@@ -11,3 +11,7 @@
 .content-top .search-form .form-control {
     padding: 9px 17px 9px 40px;
 }
+
+.content-top .btn {
+    padding: 9px 17px;
+}
