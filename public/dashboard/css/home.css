@@ -1,17 +1,17 @@
 .dashboard-home .content-wrapper {
     background: #f4f6fa;
 }
-.dash-top .card {
+.dashboard-home .dash-top .card {
     padding-left: 55px;
 }
-.table-vcenter>:not(caption)>*>* {
+.dashboard-home .table-vcenter>:not(caption)>*>* {
     vertical-align: middle;
 }
-.table-vcenter thead tr th:first-child,
-.table-vcenter tbody tr td:first-child {
+.dashboard-home .table-vcenter thead tr th:first-child,
+.dashboard-home .table-vcenter tbody tr td:first-child {
     padding-left: 16px;
 }
-.table-vcenter thead tr th:last-child,
-.table-vcenter tbody tr td:last-child {
+.dashboard-home .table-vcenter thead tr th:last-child,
+.dashboard-home .table-vcenter tbody tr td:last-child {
     padding-right: 16px;
 }
