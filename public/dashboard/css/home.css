@@ -7,3 +7,6 @@
 .table-vcenter>:not(caption)>*>* {
     vertical-align: middle;
 }
+.btn {
+    padding: 9px 17px;
+}
