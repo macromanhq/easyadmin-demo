@@ -1,1 +1,87 @@
+:root {
+    --primary: #5368d5;
+}
+
 /* cart page style */
+.td-action-x button {
+    box-shadow: none;
+    border: 1px solid red;
+    color: red;
+    background: transparent;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+}
+.td-action-x button:hover {
+    background: red;
+    color: white;
+}
+
+/* Radio Input */
+.form-selectgroup-item {
+    display: block;
+    position: relative;
+}
+.form-selectgroup-item .form-check-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+.cart-bot-tables i {
+    font-size: 20px;
+    color: #8895A4;
+}
+.cart-bot-tables .form-selectgroup-item {
+    margin-bottom: 30px;
+}
+.cart-print-section .form-check-label,
+.cart-bot-tables .form-check-label {
+    font-size: 16px;
+    color: #2D2D2D;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border: 1px solid #dadcde;
+    border-radius: 4px;
+}
+.form-selectgroup-boxes .form-check-input:checked+.form-check-label i,
+.form-selectgroup-boxes .form-check-input:checked+.form-check-label {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(113, 110, 255, 0.05);
+    box-shadow: none;
+}
+
+/* Cart Mid TAble */
+.cart-mid-tables .form-label {
+    min-width: 130px;
+}
+.input-icon .form-control {
+    padding-right: 2.5rem;
+}
+.input-icon-addon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    color: #656d77;
+    pointer-events: none;
+    font-size: 1.2em;
+    z-index: 999;
+}
+.input-group>.form-control.number-field {
+    width: 80%;
+}
+
+/* Print Section */
+.cart-print-section .form-check-label {
+    padding-left: 12px;
+    padding-right: 12px;
+    user-select: none;
+}

@@ -5,7 +5,7 @@
 {% block page_content %}
 <form name="cart_form" method="post">
     <div class="row row-deck row-cards" data-controller="cart">
-        <div class="col-12">
+        <div class="col-12 mb-5">
             <div class="card cart-top-prod-table">
                 <div class="" data-cart-target="sellParent" data-count-sell="1">
                     <table class="table card-table datatable text-nowrap table-borderless">
@@ -36,9 +36,9 @@
                                                     <span class="input-icon-addon">
                                                         <div class="spinner-border spinner-border-sm text-muted" role="status" data-sell-target="productSearchInputIconSpinner"></div>
                                                         <a href="#" data-sell-target="productSearchInputIconX" data-action="sell#clearQuery">
-                                                            <i class="ti ti-x"></i>
+                                                            <i class="fas fa-times"></i>
                                                         </a>
-                                                        <i class="ti ti-search d-block" data-sell-target="productSearchInputIconSearch"></i>
+                                                        <i class="fas fa-search d-block" data-sell-target="productSearchInputIconSearch"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -81,8 +81,8 @@
                                     </div>
                                 </td>
                                 <td class="td-action-x w-5p">
-                                    <button type="button" class="btn btn-outline-danger" data-action="cart#removeSellRow">
-                                        <i class="ti ti-x"></i>
+                                    <button type="button" data-action="cart#removeSellRow">
+                                        <i class="fas fa-times"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -92,7 +92,7 @@
                 </div>
                 <div class="card-body pt-0">
                     <button type="button" class="btn btn-primary text-uppercase" data-action="cart#addSellRow">
-                        <i class="ti ti-plus"></i>
+                        <i class="fas fa-plus"></i>
                         Add A Product
                     </button>
                 </div>
@@ -100,53 +100,53 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="col-xl-6 col-lg-12 cart-bot-tables">
-            <div class="card">
+        <div class="col-xl-6 col-lg-12 cart-bot-tables mb-5">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h1 class="card-title text-uppercase font-weight-bold">Payment Method<span class="required">*</span>
+                    <h1 class="card-title text-uppercase font-weight-bold mb-4">Payment Method<span class="required">*</span>
                     </h1>
                     <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="41">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
                                 <span class="me-2">
-                                    <i class="ti ti-cash-banknote"></i>
+                                    <i class="fas fa-money-check-alt"></i>
                                 </span>
                                 Cash
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_paymentMethod_42" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="42">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
                                 <span class="me-2">
-                                    <i class="ti ti-cash-banknote"></i>
+                                    <i class="fas fa-money-check-alt"></i>
                                 </span>
                                 Cash On Delivery
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_paymentMethod_43" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="43">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
                                 <span class="me-2">
-                                    <i class="ti ti-cash-banknote"></i>
+                                    <i class="fas fa-money-check-alt"></i>
                                 </span>
                                 bKash
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_paymentMethod_44" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="44">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
                                 <span class="me-2">
-                                    <i class="ti ti-cash-banknote"></i>
+                                    <i class="fas fa-money-check-alt"></i>
                                 </span>
                                 Nagad
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_paymentMethod_45" name="cart_form[paymentMethod]" required="required" class="form-selectgroup-input form-control" value="45">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
                                 <span class="me-2">
-                                    <i class="ti ti-cash-banknote"></i>
+                                    <i class="fas fa-university"></i>
                                 </span>
                                 Bank
                             </div>
@@ -155,44 +155,44 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 col-lg-12 cart-bot-tables">
-            <div class="card">
+        <div class="col-xl-6 col-lg-12 cart-bot-tables mb-5">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h1 class="card-title text-uppercase font-weight-bold">Shipment method<span class="required">*</span>
+                    <h1 class="card-title text-uppercase font-weight-bold mb-4">SHIPMENT METHOD<span class="required">*</span>
                     </h1>
                     <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_shippingMethod_39" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="39">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
-                                <span class="pe-2">
-                                    <i class="ti ti-truck-off"></i>
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="fas fa-truck"></i>
                                 </span>
                                 Walk in Customer
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_shippingMethod_40" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="40">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
-                                <span class="pe-2">
-                                    <i class="ti ti-truck-off"></i>
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="fas fa-store-alt"></i>
                                 </span>
                                 In Store Pickup
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_shippingMethod_41" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="41">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
-                                <span class="pe-2">
-                                    <i class="ti ti-truck-off"></i>
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="fas fa-truck"></i>
                                 </span>
                                 SA Paribahan
                             </div>
                         </label>
                         <label class="form-selectgroup-item flex-fill">
-                            <input type="radio" id="cart_form_shippingMethod_42" name="cart_form[shippingMethod]" required="required" class="form-selectgroup-input form-control" value="42">
-                            <div class="form-selectgroup-label d-flex align-items-center ps-4">
-                                <span class="pe-2">
-                                    <i class="ti ti-truck-off"></i>
+                            <input type="radio" id="cart_form_paymentMethod_41" name="cart_form[paymentMethod]" required="required" class="form-check-input" value="41">
+                            <div class="form-check-label d-flex align-items-center ps-4">
+                                <span class="me-2">
+                                    <i class="fas fa-truck"></i>
                                 </span>
                                 Sundarban Courier Service
                             </div>
@@ -203,8 +203,8 @@
         </div>
 
         <!-- Middle Section -->
-        <div class="col-lg-12 col-xl-6 cart-mid-tables">
-            <div class="card">
+        <div class="col-lg-12 col-xl-6 cart-mid-tables info-table mb-5">
+            <div class="card h-100">
                 <div class="card-body">
                     <div class="d-flex mb-3">
                         <label class="form-label text-uppercase">Sub Total<span class="required">*</span>
@@ -215,12 +215,14 @@
                     <div class="d-flex mb-3">
                         <label class="form-label text-uppercase">Discount<span class="required">*</span>
                         </label>
-                        <input type="number" id="cart_form_discount" name="cart_form[discount]" required="required" step="any" class="no-number-spin form-control" data-action="cart#calculateTotal" data-cart-target="cartDiscount" value="0.00">
-                        <div class="input-icon ms-16">
-                            <input type="number" min="0" max="100" step="any" class="form-control no-number-spin" data-cart-target="cartDiscountPercent" data-action="cart#calculateDiscountPercent">
-                            <span class="input-icon-addon">
-                                <i class="ti ti-percentage"></i>
-                            </span>
+                        <div class="input-group">
+                            <input type="number" id="cart_form_discount" name="cart_form[discount]" required="required" step="any" class="no-number-spin number-field form-control" data-action="cart#calculateTotal" data-cart-target="cartDiscount" value="0.00">
+                            <div class="input-icon">
+                                <span class="input-icon-addon">
+                                    <i class="fas fa-percentage"></i>
+                                </span>
+                            </div>
+                            <input type="number" min="0" max="100" step="any" class="form-control no-number-spin pe-5" data-cart-target="cartDiscountPercent" data-action="cart#calculateDiscountPercent">
                         </div>
                     </div>
 
@@ -244,8 +246,8 @@
                             <option value="30004">Sarim Khan [+8801732261726]</option>
                             <option value="30005">Oritro [+8801732261726]</option>
                         </select>
-                        <button type="button" class="btn btn-primary text-uppercase btn-add-new" data-action="cart#toggleNewCustomerForm" data-cart-target="toggleNewCustomerButton">
-                            <i class="ti ti-plus"></i>
+                        <button type="button" class="btn btn-primary text-uppercase btn-add-new ms-2" data-action="cart#toggleNewCustomerForm" data-cart-target="toggleNewCustomerButton">
+                            <i class="fas fa-plus"></i>
                             Add New
                         </button>
                     </div>
@@ -263,11 +265,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 col-xl-6 cart-mid-tables">
-            <div class="card customer-data">
+        <div class="col-lg-12 col-xl-6 cart-mid-tables new-customer mb-5">
+            <div class="card customer-data h-100">
                 <div class="card-body">
-                    <fieldset data-cart-target="cartNewCustomerFieldset">
-                        <h1 class="card-title text-uppercase font-weight-bold">New Customer</h1>
+                    <fieldset class="bg-transparent border-0" data-cart-target="cartNewCustomerFieldset">
+                        <h1 class="card-title text-uppercase font-weight-bold mb-4">New Customer</h1>
                         <div class="d-flex mb-3">
                             <label class="form-label text-uppercase">Name<span class="required">*</span>
                             </label>
@@ -307,47 +309,43 @@
             <div class="flex-xl-grow-1 cart-print-section">
                 <div class="card">
                     <div class="card-body d-flex justify-content-between align-items-center">
-                        <h1 class="text-primary text-uppercase">Print</h1>
-                        <div class="form-selectgroup">
+                        <h1 class="text-primary text-uppercase mb-0">Print</h1>
+                        <div class="form-selectgroup form-selectgroup-boxes d-flex">
                             <label class="form-selectgroup-item">
-                                <input type="checkbox" name="name" value="HTML" class="form-selectgroup-input" checked="">
-                                <span class="form-selectgroup-label">Invoice</span>
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input" checked="">
+                                <span class="form-check-label">Invoice</span>
                             </label>
-                            <label class="form-selectgroup-item">
-                                <input type="checkbox" name="name" value="CSS" class="form-selectgroup-input">
-                                <span class="form-selectgroup-label">Option</span>
+                            <label class="form-selectgroup-item ps-2">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input">
+                                <span class="form-check-label">Option</span>
                             </label>
-                            <label class="form-selectgroup-item">
-                                <input type="checkbox" name="name" value="PHP" class="form-selectgroup-input">
-                                <span class="form-selectgroup-label">Demo</span>
+                            <label class="form-selectgroup-item ps-2">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input">
+                                <span class="form-check-label">Demo</span>
                             </label>
-                            <label class="form-selectgroup-item">
-                                <input type="checkbox" name="name" value="JavaScript" class="form-selectgroup-input">
-                                <span class="form-selectgroup-label">Select</span>
+                            <label class="form-selectgroup-item ps-2">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input">
+                                <span class="form-check-label">Select</span>
                             </label>
-                            <label class="form-selectgroup-item">
-                                <input type="checkbox" name="name" value="JavaScript" class="form-selectgroup-input">
-                                <span class="form-selectgroup-label">Choose</span>
+                            <label class="form-selectgroup-item ps-2">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input">
+                                <span class="form-check-label">Choose</span>
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mx-xl-2">
-                <div class="card">
+            <div class="mx-xl-2 cart-print-section">
+                <div class="card h-100">
                     <div class="card-body py-9 px-8 d-flex justify-content-center align-items-center">
-                        <div class="form-selectgroup">
-                            <label class="form-selectgroup-item my-0">
-                                <input type="checkbox" id="cart_form_sendSms" name="cart_form[sendSms]" class="form-selectgroup-input form-control" value="1">
-                                <span class="form-selectgroup-label max-w-36 px-5px me-8" data-bs-toggle="tooltip" data-bs-placement="top" title="Send SMS Notification">
-                                    <i class="ti ti-device-mobile-message"></i>
-                                </span>
+                        <div class="form-selectgroup form-selectgroup-boxes d-flex">
+                            <label class="form-selectgroup-item">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input" checked="">
+                                <span class="form-check-label"><i class="fas fa-comment-alt"></i></span>
                             </label>
-                            <label class="form-selectgroup-item my-0">
-                                <input type="checkbox" id="cart_form_sendEmail" name="cart_form[sendEmail]" class="form-selectgroup-input form-control" value="1">
-                                <span class="form-selectgroup-label max-w-36 px-5px" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email Notification">
-                                    <i class="ti ti-mail"></i>
-                                </span>
+                            <label class="form-selectgroup-item ps-2">
+                                <input type="checkbox" name="name" value="HTML" class="form-check-input">
+                                <span class="form-check-label"><i class="fas fa-envelope"></i></span>
                             </label>
                         </div>
                     </div>
