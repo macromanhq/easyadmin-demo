@@ -1,17 +1,17 @@
-<form class="d-flex align-items-center border rounded search-form me-2">
+<form class="d-flex align-items-center border rounded search-form me-lg-2">
     <button class="btn my-2 my-sm-0" type="submit">
         <i class="fas fa-search"></i>
     </button>
     <input class="form-control border-0 bg-transparent flex-grow-1" type="search" placeholder="Search" aria-label="Search">
 </form>
 
-<ul class="navbar-nav">
+<ul class="navbar-nav my-2 my-lg-0">
     <li class="nav-item">
-        <a href="#" class="btn btn-primary">Upgrade</a>
+        <a href="#" class="btn btn-primary w-100">Upgrade</a>
     </li>
 </ul>
 
-<div class="btn-group ms-4" role="group">
+<div class="btn-group ms-4 pb-4 pb-lg-0" role="group">
     <a href="{{ 
         ea_url()
         .setRoute('cart_new') 
