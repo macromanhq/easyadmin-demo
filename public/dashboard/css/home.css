@@ -7,11 +7,203 @@
 .dashboard-home .table-vcenter>:not(caption)>*>* {
     vertical-align: middle;
 }
-.dashboard-home .table-vcenter thead tr th:first-child,
-.dashboard-home .table-vcenter tbody tr td:first-child {
+.dashboard-home thead tr th:first-child,
+.dashboard-home tbody tr td:first-child {
     padding-left: 16px;
 }
-.dashboard-home .table-vcenter thead tr th:last-child,
-.dashboard-home .table-vcenter tbody tr td:last-child {
+.dashboard-home thead tr th:last-child,
+.dashboard-home tbody tr td:last-child {
     padding-right: 16px;
+}
+
+
+/* Cart List */
+.cartlist thead th {
+    font-size: 16px;
+    line-height: 24px;
+    color: #043D52;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.id-and-date {
+    width: 132px;
+}
+
+.customer-id {
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #043D52;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.id-and-date a {
+    width: 100%;
+    height: 42px;
+    line-height: 34px;
+    border: 1px solid #D9ECE7;
+    border-radius: 4px;
+    background: transparent;
+    color: #043D52;
+    box-shadow: none;
+}
+
+
+
+
+
+.product {
+    width: 240px;
+}
+
+.cartlist ol {
+    list-style: none;
+    counter-reset: hisab-counter;
+    padding-left: 0;
+}
+.cartlist ol > li {
+    counter-increment: hisab-counter;
+    margin: 0;
+    position: relative;
+    padding-left: 28px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.cartlist ol > li:nth-child(2n) {
+    background: rgba(0, 128, 96, 0.05);
+    border-top: 1px solid #D9ECE7;
+    border-bottom: 1px solid #D9ECE7;
+}
+.cartlist ol > li::before {
+    content: counter(hisab-counter);
+    position: absolute;
+    background: #0080601A;
+    width: 18px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #2D2D2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product .stock {
+    width: 32px;
+    height: 14px;
+    background: rgba(0, 128, 96, 0.1);
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #6A6969;
+    text-align: center;
+}
+
+.product .prod-id,
+.product .color {
+    font-size: 12px;
+}
+
+.customer {
+    width: 160px;
+}
+.customer-name {
+    color: #043D52;
+}
+.customer p:not(.customer-name) {
+    font-size: 12px;
+}
+
+.taka-info {
+    width: 178px;
+}
+.taka-info .amount {
+    font-weight: 500;
+}
+
+.status {
+    width: 88px;
+}
+.status .title {
+    letter-spacing: 0.01em;
+    color: #043D52;
+    margin-bottom: 5px;
+}
+.status .btn {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 12px;
+}
+.btn-paid {
+    background: rgba(0, 128, 96, 0.15);
+    color: #008060;
+}
+.btn-unpaid {
+    background: rgba(239, 35, 60, 0.15);
+    color: #EF233C;
+}
+.btn-cancel {
+    background: rgba(113, 110, 255, 0.15);
+    color: #716EFF;
+}
+.btn-pending {
+    background: rgba(242, 147, 57, 0.1);
+    color: #F29339;
+}
+.btn-shipped {
+    background: rgba(17, 138, 178, 0.15);
+    color: #118AB2;
+}
+.btn-delivered {
+    background: rgba(0, 128, 96, 0.15);
+    color: #008060;
+}
+
+.note {
+    width: 322px;
+}
+.note-top-text {
+    font-size: 12px;
+}
+.note p .btn {
+    flex-grow: 1;
+    flex-basis: 0;
+    box-shadow: none;
+}
+.note p.colored-btn-wrap .btn {
+    background: rgba(0, 128, 96, 0.1);
+    border: 1px solid #008060;
+    border-radius: 5px;
+    color: #008060;
+}
+
+.note p.colored-btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):hover {
+    border: 1px solid #008060;
+    background: transparent;
+    color: #008060;
+}
+
+.note p.non-colored-btn-wrap .btn {
+    background: transparent;
+    border: 1px solid #D9ECE7;
+    border-radius: 5px;
+    color: #8F8E8E;
+}
+.note p.non-colored-btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):hover {
+    border: 1px solid #D9ECE7;
+    background: #D9ECE7;
+    color: #666666;
+}
+
+.btn-print {
+    height: 42px;
+    background: #008060;
+    border-radius: 4px;
+    line-height: 36px;
+    color: #FFFFFF;
 }
