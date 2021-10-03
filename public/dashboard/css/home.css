@@ -55,6 +55,19 @@
 }
 
 
+.id-and-date .btn:not(:disabled):not(.disabled):not(.btn-link):hover {
+    box-shadow: none;
+    border: 1px solid #D9ECE7;
+    background: #D9ECE7;
+}
+
+/*.id-and-date a:hover {*/
+/*    box-shadow: none;*/
+/*    border: 1px solid #D9ECE7;*/
+/*    background: #D9ECE7;*/
+/*}*/
+
+
 
 
 
