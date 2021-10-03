@@ -15,3 +15,9 @@
 .content-top .btn {
     padding: 9px 17px;
 }
+
+@media (max-width: 991px) {
+    .content-top > .btn-group {
+        width: 100%;
+    }
+}
