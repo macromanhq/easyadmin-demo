@@ -422,19 +422,30 @@
                   <td class="note px-0">
                     <p class="px-3 note-top-text">অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই  লেখার মাঝেই আছে অনেক কিছু।</p>
                     <hr>
-                    <p class="px-3 d-flex justify-content-between colored-btn-wrap">
-                      <a href="#" class="btn me-2"><i class="fa fa-check me-1"></i>ইনভয়েস</a>
-                      <a href="#" class="btn me-2"><i class="fa fa-check me-1"></i>পস ইনভয়েস</a>
-                      <a href="#" class="btn"><i class="fa fa-check me-1"></i>প্যাড ইনভয়েস</a>
+
+                    <p class="px-3 d-flex justify-content-between btn-wrap">
+                      <input type="checkbox" class="btn-check" id="btn-invoice" checked autocomplete="off">
+                      <label class="btn btn-outline-primary me-2" for="btn-invoice"><i class="fa fa-check me-1"></i>ইনভয়েস</label>
+
+                      <input type="checkbox" class="btn-check" id="btn-pause-invoice" checked autocomplete="off">
+                      <label class="btn btn-outline-primary me-2" for="btn-pause-invoice"><i class="fa fa-check me-1"></i>পস ইনভয়েস</label>
+
+                      <input type="checkbox" class="btn-check" id="btn-pad-invoice" checked autocomplete="off">
+                      <label class="btn btn-outline-primary" for="btn-pad-invoice"><i class="fa fa-check me-1"></i>প্যাড ইনভয়েস</label>
                     </p>
-                    <p class="px-3 d-flex justify-content-between non-colored-btn-wrap">
-                      <a href="#" class="btn me-2">ডাবল ইনভয়েস</a>
-                      <a href="#" class="btn me-2">কুরিয়ার চালান</a>
-                      <a href="#" class="btn">মুসক চালান</a>
+                    <p class="px-3 d-flex justify-content-between btn-wrap">
+                      <input type="checkbox" class="btn-check" id="btn-double-invoice" autocomplete="off">
+                      <label class="btn btn-outline-primary me-2" for="btn-double-invoice"><i class="fa fa-check me-1"></i>ডাবল ইনভয়েস</label>
+
+                      <input type="checkbox" class="btn-check" id="btn-courier-challan" autocomplete="off">
+                      <label class="btn btn-outline-primary me-2" for="btn-courier-challan"><i class="fa fa-check me-1"></i>কুরিয়ার চালান</label>
+
+                      <input type="checkbox" class="btn-check" id="btn-mushak" autocomplete="off">
+                      <label class="btn btn-outline-primary" for="btn-mushak"><i class="fa fa-check me-1"></i>মুসক চালান</label>
                     </p>
 
                     <div class="px-3">
-                      <a href="#" class="btn w-100 btn-print"><i class="fa fa-print me-1"></i>প্রিন্ট</a>
+                      <a href="#" class="btn w-100 btn-primary"><i class="fa fa-print me-1"></i>প্রিন্ট</a>
                     </div>
                   </td>
                 </tr>
