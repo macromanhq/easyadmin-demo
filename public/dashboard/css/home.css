@@ -211,4 +211,30 @@
     height: 42px;
     line-height: 36px;
 }
+
+@media (max-width: 1399px) {
+    .cartlist thead th {
+        font-size: 12px;
+    }
+    .cartlist tbody td {
+        font-size: 10px;
+    }
+    .cartlist ol > li {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    .product .prod-id,
+    .product .color {
+        font-size: 10px;
+    }
+    .customer p:not(.customer-name) {
+        font-size: 10px;
+    }
+    .customer-name {
+        font-size: 12px;
+    }
+    .customer-id {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
 }
