@@ -32,7 +32,7 @@
 
 
 .id-and-date {
-    min-width: 132px;
+    width: 132px;
 }
 
 .customer-id {
@@ -72,7 +72,7 @@
 
 
 .product {
-    min-width: 240px;
+    width: 240px;
 }
 
 .cartlist ol {
@@ -125,7 +125,7 @@
 }
 
 .customer {
-    min-width: 160px;
+    width: 160px;
 }
 .customer-name {
     color: #043D52;
@@ -135,14 +135,14 @@
 }
 
 .taka-info {
-    min-width: 178px;
+    width: 178px;
 }
 .taka-info .amount {
     font-weight: 500;
 }
 
 .status {
-    min-width: 88px;
+    width: 88px;
 }
 .status .title {
     letter-spacing: 0.01em;
@@ -182,7 +182,7 @@
 }
 
 .note {
-    min-width: 322px;
+    width: 322px;
 }
 .note-top-text {
     font-size: 12px;
@@ -233,20 +233,21 @@
     .cartlist thead th {
         font-size: 12px;
     }
-    /*.cartlist tbody td {*/
-    /*    font-size: 12px;*/
-    /*}*/
+    .cartlist tbody td {
+        font-size: 12px;
+    }
     .cartlist ol > li {
         padding-top: 14px;
         padding-bottom: 14px;
+        padding-right: 8px;
     }
     .product .prod-id,
     .product .color {
+        font-size: 9px;
+    }
+    .customer p:not(.customer-name) {
         font-size: 10px;
     }
-    /*.customer p:not(.customer-name) {*/
-    /*    font-size: 10px;*/
-    /*}*/
     .customer-name {
         font-size: 12px;
     }
