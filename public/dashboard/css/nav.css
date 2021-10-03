@@ -20,4 +20,11 @@
     .content-top > .btn-group {
         width: 100%;
     }
+    .content-top > .btn-group .btn:first-child {
+        border-top-right-radius: 4px;
+    }
+    .content-top > .btn-group .btn:last-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
 }
