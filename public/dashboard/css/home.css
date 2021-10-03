@@ -1,9 +1,6 @@
 .dashboard-home .content-wrapper {
     background: #f4f6fa;
 }
-.dashboard-home .dash-top .card {
-    padding-left: 55px;
-}
 .dashboard-home .table-vcenter>:not(caption)>*>* {
     vertical-align: middle;
 }
@@ -14,6 +11,13 @@
 .dashboard-home thead tr th:last-child,
 .dashboard-home tbody tr td:last-child {
     padding-right: 16px;
+}
+
+/* Dash-top-right */
+@media (max-width: 1199px) {
+    .dash-top-right .btn-group-vertical {
+        width: 100%;
+    }
 }
 
 
