@@ -430,7 +430,8 @@
                   <th>প্রোডাক্ট</th>
                   <th>কাস্টমার</th>
                   <th>টাকা ইনফো</th>
-                  <th>স্ট্যাটাস</th>
+                  <th>পেমেন্ট</th>
+                  <th>শিপিং</th>
                   <th>নোট</th>
                 </tr>
                 </thead>
@@ -509,18 +510,17 @@
                     </p>
                   </td>
                   <td class="status px-0">
-                    <p class="px-2 title">পেমেন্ট</p>
                     <p class="px-2 mb-1"><a href="#" class="btn btn-paid">পেইড</a></p>
                     <p class="px-2 mb-1"><a href="#" class="btn btn-unpaid">আনপেইড</a></p>
                     <p class="px-2 mb-1"><a href="#" class="btn btn-cancel">ক্যানসেল</a></p>
-                    <hr>
-                    <p class="px-2 title">শিপিং</p>
+                  </td>
+                  <td class="status px-0">
                     <p class="px-2 mb-1"><a href="#" class="btn btn-pending">পেন্ডিং</a></p>
                     <p class="px-2 mb-1"><a href="#" class="btn btn-shipped">শিপড</a></p>
                     <p class="px-2 mb-1"><a href="#" class="btn btn-delivered">ডেলিভারড</a></p>
                   </td>
                   <td class="note px-0">
-                    <p class="px-3 note-top-text">অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই  লেখার মাঝেই আছে অনেক কিছু।</p>
+                    <p class="px-3 note-top-text">অর্থহীন লেখা যার মাঝে আছে অনেক কিছু।</p>
                     <hr>
 
                     <p class="px-3 d-flex justify-content-between btn-wrap">
@@ -528,15 +528,16 @@
                       <label class="btn btn-outline-primary me-2" for="btn-invoice"><i class="fa fa-check me-1"></i>ইনভয়েস</label>
 
                       <input type="checkbox" class="btn-check" id="btn-pause-invoice" checked autocomplete="off">
-                      <label class="btn btn-outline-primary me-2" for="btn-pause-invoice"><i class="fa fa-check me-1"></i>পস ইনভয়েস</label>
-
-                      <input type="checkbox" class="btn-check" id="btn-pad-invoice" checked autocomplete="off">
-                      <label class="btn btn-outline-primary" for="btn-pad-invoice"><i class="fa fa-check me-1"></i>প্যাড ইনভয়েস</label>
+                      <label class="btn btn-outline-primary" for="btn-pause-invoice"><i class="fa fa-check me-1"></i>পস ইনভয়েস</label>
                     </p>
                     <p class="px-3 d-flex justify-content-between btn-wrap">
-                      <input type="checkbox" class="btn-check" id="btn-double-invoice" autocomplete="off">
-                      <label class="btn btn-outline-primary me-2" for="btn-double-invoice"><i class="fa fa-check me-1"></i>ডাবল ইনভয়েস</label>
+                      <input type="checkbox" class="btn-check" id="btn-pad-invoice" checked autocomplete="off">
+                      <label class="btn btn-outline-primary me-2" for="btn-pad-invoice"><i class="fa fa-check me-1"></i>প্যাড ইনভয়েস</label>
 
+                      <input type="checkbox" class="btn-check" id="btn-double-invoice" autocomplete="off">
+                      <label class="btn btn-outline-primary" for="btn-double-invoice"><i class="fa fa-check me-1"></i>ডাবল ইনভয়েস</label>
+                    </p>
+                    <p class="px-3 d-flex justify-content-between btn-wrap">
                       <input type="checkbox" class="btn-check" id="btn-courier-challan" autocomplete="off">
                       <label class="btn btn-outline-primary me-2" for="btn-courier-challan"><i class="fa fa-check me-1"></i>কুরিয়ার চালান</label>
 
