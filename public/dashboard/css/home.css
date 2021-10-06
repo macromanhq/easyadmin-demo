@@ -130,6 +130,7 @@
 .customer {
     width: 160px;
 }
+.cartlist-4 .customer,
 .cartlist-3 .customer {
     width: 150px;
 }
@@ -143,6 +144,7 @@
 .taka-info {
     width: 178px;
 }
+.cartlist-4 .taka-info,
 .cartlist-3 .taka-info {
     width: 150px;
 }
@@ -153,6 +155,7 @@
 .status {
     width: 88px;
 }
+.cartlist-4 .status,
 .cartlist-3 .status {
     width: 150px;
 }
@@ -197,6 +200,7 @@
 .note {
     width: 280px;
 }
+.cartlist-4 .note,
 .cartlist-3 .note {
     width: 100%;
 }
@@ -246,15 +250,18 @@
 }
 
 /* Cart list 3 */
+.cartlist-4 .id-and-date .btn,
 .cartlist-3 .id-and-date .btn {
     width: 42px;
     height: 42px;
 }
 
+.cartlist.cartlist-4 ol > li,
 .cartlist.cartlist-3 ol > li {
     border-bottom: 1px solid #D9ECE7;
 }
 
+.cartlist-4 .product .stock,
 .cartlist-3 .product .stock {
     position: relative;
     top: 5px;
@@ -265,10 +272,12 @@
     top: 4px;
 }
 
+.cartlist-4 .status .border-bottom,
 .cartlist-3 .status .border-bottom {
     border-color: #D9ECE7;
 }
 
+/*.cartlist-4 .status .list-item,*/
 .cartlist-3 .status .list-item {
     border-right: 1px solid #D9ECE7;
 }
@@ -276,6 +285,8 @@
 .note.btn-wrap .btn {
     border: 1px solid #D9ECE7;
     color: #8F8E8E;
+    font-size: 12px;
+    width: 100px;
 }
 
 .note.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active,
@@ -299,6 +310,12 @@
 }
 .note.btn-wrap .btn-check:checked+.btn-outline-primary i {
     display: inline-block;
+}
+
+/* Cartlist 4 */
+.cartlist-4 .status .title {
+    min-width: 55px;
+    min-width: 55px;
 }
 
 @media (max-width: 1399px) {
@@ -325,9 +342,10 @@
     }
     .customer-id {
         font-size: 13px;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
 
+    .cartlist-4 .id-and-date .btn,
     .cartlist-3 .id-and-date .btn {
         width: 36px;
         height: 36px;
