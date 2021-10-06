@@ -74,6 +74,9 @@
 .product {
     width: 240px;
 }
+.cartlist-3 .product {
+    width: 295px;
+}
 
 .cartlist ol {
     list-style: none;
@@ -127,6 +130,9 @@
 .customer {
     width: 160px;
 }
+.cartlist-3 .customer {
+    width: 150px;
+}
 .customer-name {
     color: #043D52;
 }
@@ -137,6 +143,9 @@
 .taka-info {
     width: 178px;
 }
+.cartlist-3 .taka-info {
+    width: 150px;
+}
 .taka-info .amount {
     font-weight: 500;
 }
@@ -144,12 +153,16 @@
 .status {
     width: 88px;
 }
+.cartlist-3 .status {
+    width: 150px;
+}
 .status .title {
     letter-spacing: 0.01em;
     color: #043D52;
     margin-bottom: 5px;
 }
-.status .btn {
+.status .shipping-btn .btn,
+.status .payment-btn .btn {
     width: 100%;
     height: 20px;
     border-radius: 10px;
@@ -183,6 +196,9 @@
 
 .note {
     width: 280px;
+}
+.cartlist-3 .note {
+    width: 100%;
 }
 .note-top-text {
     font-size: 12px;
@@ -229,6 +245,62 @@
     line-height: 36px;
 }
 
+/* Cart list 3 */
+.cartlist-3 .id-and-date .btn {
+    width: 42px;
+    height: 42px;
+}
+
+.cartlist.cartlist-3 ol > li {
+    border-bottom: 1px solid #D9ECE7;
+}
+
+.cartlist-3 .product .stock {
+    position: relative;
+    top: 5px;
+}
+
+.customer .d-flex i {
+    position: relative;
+    top: 4px;
+}
+
+.cartlist-3 .status .border-bottom {
+    border-color: #D9ECE7;
+}
+
+.cartlist-3 .status .list-item {
+    border-right: 1px solid #D9ECE7;
+}
+
+.note.btn-wrap .btn {
+    border: 1px solid #D9ECE7;
+    color: #8F8E8E;
+}
+
+.note.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active,
+.note.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active:focus,
+.note.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):focus,
+.note.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):hover,
+.note.btn-wrap .btn-check:active+.btn-outline-primary,
+.note.btn-wrap .btn-check:checked+.btn-outline-primary:hover,
+.note.btn-wrap .btn-check:checked+.btn-outline-primary,
+.note.btn-wrap .btn-outline-primary.active,
+.note.btn-wrap .btn-outline-primary.dropdown-toggle.show,
+.note.btn-wrap .btn-outline-primary:active {
+    background: rgba(0, 128, 96, 0.1);
+    border: 1px solid #008060;
+    border-radius: 5px;
+    color: #008060;
+    box-shadow: none;
+}
+.note.btn-wrap .btn-outline-primary i {
+    display: none;
+}
+.note.btn-wrap .btn-check:checked+.btn-outline-primary i {
+    display: inline-block;
+}
+
 @media (max-width: 1399px) {
     .cartlist thead th {
         font-size: 12px;
@@ -254,5 +326,11 @@
     .customer-id {
         font-size: 13px;
         margin-bottom: 16px;
+    }
+
+    .cartlist-3 .id-and-date .btn {
+        width: 36px;
+        height: 36px;
+        line-height: 28px;
     }
 }
