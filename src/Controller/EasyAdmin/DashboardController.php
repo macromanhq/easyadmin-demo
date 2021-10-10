@@ -86,6 +86,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToRoute('Add Cart', 'fa fa-shopping-cart', 'cart_new'),
         ]);
         yield MenuItem::linkToCrud('Users', 'fa fa-users', User::class);
+        yield MenuItem::linkToRoute('Empty Page', 'fa fa-file-text-o', 'empty_data');
         yield MenuItem::subMenu('Blogging', 'fa fa-file')->setSubItems([
             MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text-o', Post::class),
             MenuItem::linkToCrud('Comments', 'far fa-comments', Comment::class),
