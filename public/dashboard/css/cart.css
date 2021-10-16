@@ -46,6 +46,10 @@ input[type=number] {
     z-index: -1;
     opacity: 0;
 }
+
+.card-title {
+    font-size: 20px;
+}
 .cart-bot-tables i {
     font-size: 20px;
     color: #8895A4;
@@ -98,7 +102,7 @@ input[type=number] {
     z-index: 999;
 }
 .input-group>.form-control.number-field {
-    width: 80%;
+    width: 60%;
 }
 
 .new-customer .input-dropdown:after {
@@ -113,6 +117,14 @@ input[type=number] {
     border-right: 1px solid #000;
     transform: rotate(45deg);
     border-bottom: 1px solid #000;
+}
+
+.discount-percentage {
+    padding-right: 30px;
+}
+
+.new-customer fieldset > .d-flex {
+    margin-bottom: 1rem;
 }
 
 /* Cart Bottom Table */
@@ -191,4 +203,22 @@ input[type=number] {
 .print-check-item .btn-primary {
     height: 42px;
     line-height: 36px;
+}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 575px) {
+    .cart-mid-tables .form-label {
+        text-align: left;
+        padding-left: 8px;
+    }
+    .info-table .form-label + div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .new-customer fieldset > .d-flex {
+        margin-bottom: 0;
+    }
 }

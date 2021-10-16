@@ -104,7 +104,7 @@
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="card-title text-uppercase font-weight-bold mb-4">Payment Method<span class="required">*</span>
+                        <h1 class="card-title text-uppercase font-weight-bold">Payment Method<span class="required">*</span>
                         </h1>
                         <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                             <label class="form-selectgroup-item flex-fill">
@@ -159,7 +159,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="card-title text-uppercase font-weight-bold mb-4">SHIPMENT METHOD<span class="required">*</span>
+                        <h1 class="card-title text-uppercase font-weight-bold">SHIPMENT METHOD<span class="required">*</span>
                         </h1>
                         <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                             <label class="form-selectgroup-item flex-fill">
@@ -230,13 +230,13 @@
         <div class="col-xl-6 col-lg-12 cart-mid-tables info-table mb-5">
             <div class="card h-100">
                 <div class="card-body">
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Sub Total<span class="required">*</span>
                         </label>
                         <div class="w-100 bg-light px-2 d-flex align-items-center">10,100.00</div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Discount<span class="required">*</span>
                         </label>
                         <div class="input-group">
@@ -246,43 +246,43 @@
                                     <i class="fas fa-percentage"></i>
                                 </span>
                             </div>
-                            <input type="number" min="0" max="100" step="any" class="form-control no-number-spin pe-5" data-cart-target="cartDiscountPercent" data-action="cart#calculateDiscountPercent">
+                            <input type="number" min="0" max="100" step="any" class="form-control no-number-spin discount-percentage" data-cart-target="cartDiscountPercent" data-action="cart#calculateDiscountPercent">
                         </div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Total<span class="required">*</span>
                         </label>
                         <div class="w-100 bg-light px-2 d-flex align-items-center">10,000.00</div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Flag Shipping Rate (Nationwide)</label>
                         <div class="w-100 bg-light px-2 d-flex align-items-center">1,000.00</div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Credit card gateway Fee</label>
                         <div class="w-100 bg-light px-2 d-flex align-items-center"><span class="me-3">100.00</span><span>25%</span></div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Grand Total*</label>
                         <div class="w-100 bg-light px-2 d-flex align-items-center">50,00000.00</div>
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label text-uppercase">Payment<span class="required">*</span>
                         </label>
                         <input type="number" id="cart_form_payment" name="cart_form[payment]" required="required" step="any" class="no-number-spin form-control" data-cart-target="cartPayment">
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label col-2 col-form-label text-uppercase">Remarks</label>
                         <input type="text" id="cart_form_remarks" name="cart_form[remarks]" maxlength="255" class="form-control">
                     </div>
 
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-column flex-sm-row mb-3">
                         <label class="form-label col-2 col-form-label text-uppercase">Date<span class="required">*</span>
                         </label>
                         <input type="datetime-local" id="cart_form_date" name="cart_form[date]" required="required" class="form-control" value="2021-09-29T21:59:21">
@@ -295,10 +295,10 @@
         <div class="col-lg-12 col-xl-6 cart-mid-tables new-customer mb-5">
             <div class="card customer-data h-100">
                 <div class="card-body">
-                    <fieldset class="bg-transparent border-0" data-cart-target="cartNewCustomerFieldset">
-                        <h1 class="card-title text-uppercase font-weight-bold mb-4">Customer</h1>
+                    <fieldset class="bg-transparent border-0 p-0" data-cart-target="cartNewCustomerFieldset">
+                        <h1 class="card-title text-uppercase font-weight-bold">Customer</h1>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase"></label>
                             <div class="input-group mb-3">
                                 <span class="input-group-text h-auto bg-transparent" id="basic-addon1"><i class="fa fa-search"></i></span>
@@ -306,25 +306,25 @@
                             </div>
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Name<span class="required">*</span>
                             </label>
                             <input type="text" id="cart_form_newCustomer_name" name="cart_form[newCustomer][name]" required="required" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Phone<span class="required">*</span>
                             </label>
                             <input type="text" id="cart_form_newCustomer_email" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Email<span class="required">*</span>
                             </label>
                             <input type="email" id="cart_form_newCustomer_email" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control">
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Region<span class="required">*</span></label>
                             <div class="input-dropdown position-relative flex-grow-1">
                                 <input type="text" id="cart_form_newCustomer_region" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -336,7 +336,7 @@
                             </div>
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">City<span class="required">*</span></label>
                             <div class="input-dropdown position-relative flex-grow-1">
                                 <input type="text" id="cart_form_newCustomer_city" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -348,7 +348,7 @@
                             </div>
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Area<span class="required">*</span></label>
                             <div class="input-dropdown position-relative flex-grow-1">
                                 <input type="text" id="cart_form_newCustomer_area" name="cart_form[newCustomer][email]" maxlength="255" data-cart-target="cartNewCustomerFieldsetInput" class="form-control dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -360,7 +360,7 @@
                             </div>
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex flex-column flex-sm-row">
                             <label class="form-label text-uppercase">Address<span class="required">*</span>
                             </label>
                             <textarea id="cart_form_newCustomer_address" name="cart_form[newCustomer][address]" required="required" data-cart-target="cartNewCustomerFieldsetInput" class="form-control"></textarea>
@@ -372,7 +372,7 @@
         <div class="col-lg-12 col-xl-6 cart-mid-tables cart-print-section mb-5">
             <div class="card h-100">
                 <div class="card-body px-0">
-                    <h1 class="card-title text-uppercase font-weight-bold mb-4 px-3">Print</h1>
+                    <h1 class="card-title text-uppercase font-weight-bold px-3">Print</h1>
                     <hr>
 
                     <div class="print-check-item btn-wrap px-3 py-4">

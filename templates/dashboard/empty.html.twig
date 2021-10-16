@@ -8,7 +8,10 @@
 {% block body_class %}dashboard-empty-page {{parent()}}{% endblock %}
 
 {% block main %}
-  <div>
-  empty
+  <div class="empty-wrap text-center">
+    <i class="fas fa-shopping-cart text-primary"></i>
+    <p class="still-no-cart mb-0">এখনো কোনো কার্ট অ্যাড করা হয়নি</p>
+    <p class="mb-2 add-new-prod">প্রথমে নতুন প্রোডাক্ট যোগ করুন</p>
+    <a href="#" class="btn btn-primary">অ্যাড কার্ট</a>
   </div>
 {% endblock %}
