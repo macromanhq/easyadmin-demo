@@ -194,9 +194,9 @@ input[type=number] {
     color: #FFF;
     transition: .3s all;
 }
-.print-check-item .btn-finish-sale:hover {
-    background: transparent;
-    color: var(--secondary);
+.print-check-item .btn-hover.btn:not(:disabled):not(.disabled):not(.btn-link):hover {
+    background: var(--primary);
+    color: #FFFFFF;
 }
 
 /* Responsive */
