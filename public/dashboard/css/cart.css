@@ -1,10 +1,11 @@
 :root {
-    --primary: #043D52;
+    --primary: #008060;
+    --secondary: #043D52;
 }
 .input-group-text {
     height: auto;
 }
-
+.form-control:focus,
 .form-control.search-form-input:focus {
     box-shadow: none;
     border-color: #ced4da;
@@ -39,6 +40,7 @@ input[type=number] {
 
 .card-title {
     font-size: 20px;
+    color: var(--secondary);
 }
 /* Radio Input */
 .payment-method .form-check-input,
@@ -58,11 +60,13 @@ input[type=number] {
     padding-left: 26px;
     width: 100%;
 }
+.payment-method .form-check-label strong,
+.shipping-method .form-check-label strong {
+    color: #000000;
+}
 .shipping-method .form-check-label p,
-.shipping-method .form-check-label strong,
-.payment-method .form-check-label p,
-.payment-method .form-check-label strong {
-    color: #6A6969;
+.payment-method .form-check-label p {
+    color: #9F9F9F;
 }
 .shipping-method .form-check:last-child .form-check-label,
 .payment-method .form-check:last-child .form-check-label {
@@ -107,11 +111,19 @@ input[type=number] {
 }
 
 /* Info Table */
+.info-table tbody td {
+    vertical-align: middle;
+}
 .info-table tbody td:first-child {
     width: 35%;
     text-align: right;
     text-transform: uppercase;
-    color: var(--primary);
+    color: var(--secondary);
+}
+.info-table tbody td:nth-child(2) .form-control,
+.info-table tbody td:nth-child(2) {
+    font-weight: 700;
+    color: var(--secondary);
 }
 .info-table .main-amount {
     width: 68%;
@@ -123,87 +135,103 @@ input[type=number] {
     width: 10%;
 }
 
+/* Customer Info */
+.customer-label {
+    color: var(--secondary);
+}
+
 /* Print Section */
+.print-check-item .col-invoice {
+    border-right: 1px solid #dee2e6;
+}
 .print-check-item ul li {
     margin-bottom: 10px;
 }
-
-.print-check-item.btn-wrap .btn {
-    border: 1px solid #D9ECE7;
-    color: #8F8E8E;
-    font-size: 12px;
-}
-
-.print-check-item.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active,
-.print-check-item.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active:focus,
-.print-check-item.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):focus,
-.print-check-item.btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):hover,
-.print-check-item.btn-wrap .btn-check:active+.btn-outline-primary,
-.print-check-item.btn-wrap .btn-check:checked+.btn-outline-primary:hover,
-.print-check-item.btn-wrap .btn-check:checked+.btn-outline-primary,
-.print-check-item.btn-wrap .btn-outline-primary.active,
-.print-check-item.btn-wrap .btn-outline-primary.dropdown-toggle.show,
-.print-check-item.btn-wrap .btn-outline-primary:active {
+.print-check-item .btn-wrap .btn-check:checked + .btn {
     background: rgba(0, 128, 96, 0.1);
     border: 1px solid #008060;
     border-radius: 5px;
     color: #008060;
     box-shadow: none;
 }
-.print-check-item.btn-wrap .btn-outline-primary i {
-    display: none;
-}
-.print-check-item.btn-wrap .btn-check:checked+.btn-outline-primary i {
-    display: inline-block;
-}
 
+.print-check-item .btn-wrap .btn-check:not(:checked) + .btn:not(:disabled):not(.disabled):not(.btn-link):hover,
 .print-check-item .btn-wrap .btn {
     border: 1px solid #D9ECE7;
     color: #8F8E8E;
     padding-top: 8px;
     padding-bottom: 8px;
     position: relative;
-}
-
-.print-check-item .btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active,
-.print-check-item .btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):active:focus,
-.print-check-item .btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):focus,
-.print-check-item .btn-wrap .btn:not(:disabled):not(.disabled):not(.btn-link):hover,
-.print-check-item .btn-wrap .btn-check:active+.btn-outline-primary,
-.print-check-item .btn-wrap .btn-check:checked+.btn-outline-primary:hover,
-.print-check-item .btn-wrap .btn-check:checked+.btn-outline-primary,
-.print-check-item .btn-wrap .btn-outline-primary.active,
-.print-check-item .btn-wrap .btn-outline-primary.dropdown-toggle.show,
-.print-check-item .btn-wrap .btn-outline-primary:active {
-    background: rgba(0, 128, 96, 0.1);
-    border: 1px solid #008060;
-    border-radius: 5px;
-    color: #008060;
     box-shadow: none;
 }
-.print-check-item .btn-wrap .btn-outline-primary i {
+
+.print-check-item .btn-wrap .btn-check:focus + .btn,
+.print-check-item .btn-wrap .btn:focus {
+    box-shadow: none;
+}
+
+.print-check-item .btn-wrap .btn i {
     display: none;
     position: absolute;
     left: 16px;
     top: 12px;
 }
-.print-check-item .btn-wrap .btn-check:checked+.btn-outline-primary i {
+.print-check-item .btn-wrap .btn-check:checked+.btn i {
     display: inline-block;
 }
 
-.print-check-item .btn-primary {
-    height: 42px;
-    line-height: 36px;
-}
-
 /* Print Notification */
-.print-notification.btn-wrap .btn-outline-primary i {
+.print-notification.btn-wrap .btn i {
     display: inline-block;
     left: 16px;
     top: 9px;
     font-size: 18px;
 }
 
-.print-check-item .btn-primary.btn-finish-sale {
+.print-check-item .btn-finish-sale {
     height: 60px;
+    background: var(--secondary);
+    color: #FFF;
+    transition: .3s all;
+}
+.print-check-item .btn-finish-sale:hover {
+    background: transparent;
+    color: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 1365px) {
+    .info-table .main-amount {
+        width: 60%;
+    }
+    .print-notification.btn-wrap .btn-check:checked+.btn i,
+    .print-notification.btn-wrap .btn i {
+        display: none;
+    }
+
+}
+@media (max-width: 1199px) {
+    .print-notification.btn-wrap .btn-check:checked+.btn i,
+    .print-notification.btn-wrap .btn i {
+        display: inline-block;
+    }
+}
+@media (max-width: 767px) {
+    .print-check-item .col-invoice {
+        border-right: none;
+    }
+}
+@media (max-width: 575px) {
+    .info-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .info-table tbody td:first-child {
+        width: 100%;
+        text-align: left;
+    }
+    .info-table tbody td #cart_form_date {
+        font-size: 13px;
+    }
 }

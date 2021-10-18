@@ -104,7 +104,7 @@
             <div class="card-group h-100">
                 <div class="card payment-method">
                     <div class="card-body">
-                        <h1 class="card-title text-uppercase text-primary font-weight-bold">Payment Method<span class="required">*</span></h1>
+                        <h1 class="card-title text-uppercase font-weight-bold">Payment Method<span class="required">*</span></h1>
                         <div class="form-check position-relative ps-0">
                             <input class="form-check-input" type="radio" name="radioInput" id="cityBank">
                             <label class="form-check-label position-relative" for="cityBank">
@@ -138,7 +138,7 @@
 
                 <div class="card shipping-method">
                     <div class="card-body">
-                        <h1 class="card-title text-uppercase text-primary font-weight-bold">SHIPMENT METHOD<span class="required">*</span>
+                        <h1 class="card-title text-uppercase font-weight-bold">SHIPMENT METHOD<span class="required">*</span>
                         </h1>
 
                         <div class="form-check position-relative ps-0">
@@ -186,25 +186,25 @@
                     <table class="table table-striped table-borderless">
                         <tbody>
                         <tr>
-                            <td>Sub Total*</td>
+                            <td>Sub Total<span class="required">*</span></td>
                             <td>10,100.00</td>
                         </tr>
                         <tr>
-                            <td>Discount*</td>
+                            <td>Discount<span class="required">*</span></td>
                             <td>
                                 <div class="input-group discount">
-                                    <input type="text" class="form-control border-0 border-bottom rounded-0 me-2 main-amount" aria-label="Amount (to the nearest dollar)">
-                                    <input type="text" class="form-control border-0 border-bottom rounded-0 discount-amount-in-percentage" aria-label="Amount (to the nearest dollar)">
+                                    <input type="text" class="form-control border-0 border-bottom rounded-0 p-0 me-2 main-amount" aria-label="Amount (to the nearest dollar)">
+                                    <input type="text" class="form-control border-0 border-bottom rounded-0 p-0 discount-amount-in-percentage" aria-label="Amount (to the nearest dollar)">
                                     <span class="input-group-text bg-transparent border-0 border-bottom rounded-0">%</span>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Total*</td>
+                            <td>Total<span class="required">*</span></td>
                             <td>10,100.00</td>
                         </tr>
                         <tr>
-                            <td>Flag Shipping Rate (Nationwide)*</td>
+                            <td>Flag Shipping Rate (Nationwide)<span class="required">*</span></td>
                             <td>1,000.00</td>
                         </tr>
                         <tr>
@@ -212,25 +212,25 @@
                             <td>1,00.00</td>
                         </tr>
                         <tr>
-                            <td>Grand Total*</td>
+                            <td>Grand Total<span class="required">*</span></td>
                             <td>50,00000.00</td>
                         </tr>
                         <tr>
-                            <td>Payment*</td>
+                            <td>Payment<span class="required">*</span></td>
                             <td>
-                                <input type="text" class="form-control border-0 border-bottom rounded-0 bg-transparent">
+                                <input type="text" class="form-control p-0 border-0 border-bottom rounded-0 bg-transparent">
                             </td>
                         </tr>
                         <tr>
-                            <td>Remarks*</td>
+                            <td>Remarks<span class="required">*</span></td>
                             <td>
-                                <input type="text" class="form-control border-0 border-bottom rounded-0 bg-transparent">
+                                <input type="text" class="form-control p-0 border-0 border-bottom rounded-0 bg-transparent">
                             </td>
                         </tr>
                         <tr>
-                            <td>Date*</td>
+                            <td>Date<span class="required">*</span></td>
                             <td>
-                                <input type="datetime-local" id="cart_form_date" name="cart_form[date]" required="required" class="form-control bg-transparent border-0 p-0" value="2021-09-29T21:59:21">
+                                <input type="datetime-local" id="cart_form_date" name="cart_form[date]" required="required" class="form-control p-0 bg-transparent border-0 p-0" value="2021-09-29T21:59:21">
                             </td>
                         </tr>
                         </tbody>
@@ -240,14 +240,14 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="col-xl-6 col-lg-12 cart-bot-table">
+        <div class="col-xl-6 col-lg-12 cart-bot-table mb-5">
             <div class="card h-100">
-                <div class="card-body">
-                    <h1 class="card-title text-uppercase text-primary font-weight-bold">Customer<span class="required">*</span></h1>
+                <div class="card-body pe-lg-5">
+                    <h1 class="card-title text-uppercase font-weight-bold">Customer<span class="required">*</span></h1>
 
                     <div class="row mb-3">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-10">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
                             <div class="input-group">
                                 <span class="input-group-text h-auto bg-transparent" id="basic-addon1"><i class="fa fa-search"></i></span>
                                 <input type="text" class="form-control border-start-0 search-form-input" placeholder="Search for customer" aria-label="Username" aria-describedby="basic-addon1">
@@ -255,131 +255,131 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Name*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Name<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Phone*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Phone<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Email*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Email<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Region*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Region<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">City*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">City<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Area*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Area<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-2">
-                            <div class="text-primary text-uppercase text-right">Address*</div>
+                        <div class="col-md-4">
+                            <div class="customer-label text-uppercase text-md-end">Address<span class="required">*</span></div>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <textarea name="address" id="address" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div  class="col-xl-6 col-lg-12 cart-bot-table">
+        <div  class="col-xl-6 col-lg-12 cart-bot-table mb-5">
             <div class="card h-100 print-check-item">
                 <div class="card-body px-0 pb-0">
-                    <h1 class="card-title text-uppercase text-primary font-weight-bold px-3">Print</h1>
+                    <h1 class="card-title text-uppercase font-weight-bold px-3">Print</h1>
                     <hr class="mt-3 mb-0">
                     <div class="">
                         <div class="row">
-                            <div class="col-md-6 border-end">
+                            <div class="col-md-6 col-invoice pe-md-0">
                                 <div class="btn-wrap px-3 pt-4">
                                     <ul class="list-unstyled mb-0">
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-invoice3" checked autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">ইনভয়েস</span></label>
+                                            <label class="btn w-100" for="btn-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">ইনভয়েস</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-pause-invoice3" checked autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-pause-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">পস ইনভয়েস</span></label>
+                                            <label class="btn w-100" for="btn-pause-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">পস ইনভয়েস</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-pad-invoice3" checked autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-pad-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">প্যাড ইনভয়েস</span></label>
+                                            <label class="btn w-100" for="btn-pad-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">প্যাড ইনভয়েস</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-double-invoice3" autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-double-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">ডাবল ইনভয়েস</span></label>
+                                            <label class="btn w-100" for="btn-double-invoice3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">ডাবল ইনভয়েস</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-courier-challan3" autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-courier-challan3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">কুরিয়ার চালান</span></label>
+                                            <label class="btn w-100" for="btn-courier-challan3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">কুরিয়ার চালান</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="btn-mushak3" autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="btn-mushak3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">মুসক চালান</span></label>
+                                            <label class="btn w-100" for="btn-mushak3"><i class="fa fa-check me-1"></i><span class="item-name d-inline-block">মুসক চালান</span></label>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 ps-md-0">
                                 <div class="print-notification btn-wrap px-3 py-4">
                                     <ul class="list-unstyled mb-0">
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="mobile-notification" checked autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="mobile-notification"><i class="fas fa-mobile-alt"></i><span class="item-name d-inline-block">মোবাইল নোটিফিকেশন</span></label>
+                                            <label class="btn w-100" for="mobile-notification"><i class="fas fa-mobile-alt"></i><span class="item-name d-inline-block">মোবাইল নোটিফিকেশন</span></label>
                                         </li>
 
                                         <li class="">
                                             <input type="checkbox" class="btn-check" id="message-notification" autocomplete="off">
-                                            <label class="btn btn-outline-primary w-100" for="message-notification"><i class="fas fa-envelope"></i><span class="item-name d-inline-block">মেসেজ নোটিফিকেশন</span></label>
+                                            <label class="btn w-100" for="message-notification"><i class="fas fa-envelope"></i><span class="item-name d-inline-block">মেসেজ নোটিফিকেশন</span></label>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="px-3 py-4">
-                        <button class="btn btn-primary btn-lg w-100 text-uppercase btn-finish-sale">Finish Sale</button>
+                    <div class="px-3 pt-md-4 pb-4">
+                        <button class="btn btn-lg w-100 text-uppercase btn-finish-sale">Finish Sale</button>
                     </div>
                 </div>
             </div>
